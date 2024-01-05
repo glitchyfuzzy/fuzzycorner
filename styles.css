@@ -20,7 +20,7 @@ html {
     
   }
   
-  .welcome {
+  .window {
     text-align: center;
     background-color: rgb(128, 213, 242);
     position: absolute;
@@ -33,10 +33,6 @@ html {
     padding: 30 px;
   }
 
-  #welcomeheader {
-    user-select: none;
-    cursor: grab;
-  }
   
   .topBar {
     display: flex;

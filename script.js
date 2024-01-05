@@ -16,20 +16,12 @@ function dragElement(element) {
   var currentX = 0;
   var currentY = 0;
 
-  // Step 3: Check if there is a special header element associated with the draggable element.
-  if (document.getElementById(element.id + "header")) {
-    // Step 4: If present, assign the `dragMouseDown` function to the header's `onmousedown` event.
-    // This allows you to drag the window around by its header.
-    document.getElementById(element.id + "header").onmousedown = startDragging;
-  } else {
-    // Step 5: If not present, assign the function directly to the draggable element's `onmousedown` event.
-    // This allows you to drag the window by holding down anywhere on the window.
-    element.onmousedown = startDragging;
-  }
+  element.onmousedown = startDragging;
+
 
   // Step 6: Define the `startDragging` function to capture the initial mouse position and set up event listeners.
   function startDragging(e) {
-    e = e || window.event;
+    e = e || document.getElementById("window").addEventListener("drag", dragElement);
     e.preventDefault();
     // Step 7: Get the mouse cursor position at startup.
     initialX = e.clientX;
@@ -41,7 +33,7 @@ function dragElement(element) {
 
   // Step 9: Define the `elementDrag` function to calculate the new position of the element based on mouse movement.
   function dragElement(e) {
-    e = e || window.event;
+    e = e || document.getElementById("window").addEventListener("drag", dragElement);
     e.preventDefault();
     // Step 10: Calculate the new cursor position.
     currentX = initialX - e.clientX;
