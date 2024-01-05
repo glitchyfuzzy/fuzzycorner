@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    font-family: 'Gaegu', sans-serif;
+    background-image: url(./wallpaper.jpg);
+    background-size: cover;
+  }
+  
+  img {
+    width: 200px;
+    border-radius: 16px;
+  }
+  
+  h1 {
+    padding: 4px;
+    margin: 4px
+    
+  }
+  
+  .welcome {
+    text-align: center;
+    background-color: rgb(128, 213, 242);
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid;
+    width: fit-content;
+    border-radius: 16px;
+    padding: 30 px;
+  }
+
+  #welcomeheader {
+    user-select: none;
+    cursor: grab;
+  }
+  
+  .topBar {
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    flex-direction: row;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(0, 0, 0, 0.25); 
+    color: #fff;
+  }
+  .topBar h1 {
+    text-align: center;
+  }
+
+
+  
+  
